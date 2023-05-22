@@ -79,7 +79,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://salimer.github.io/Leaderboard-project/dist)
+- [Live Demo Link](https://salimer.github.io/COMMENTDISH-project/dist)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -107,14 +107,14 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/Salimer/Leaderboard-project.git
+  git clone https://github.com/Salimer/COMMENTDISH-project.git
 ```
 
 using Ubuntu:
 
 ```sh
   cd my-desired-folder
-  git clone https://github.com/Salimer/Leaderboard-project.git
+  git clone https://github.com/Salimer/COMMENTDISH-project.git
 ```
 
 For more information on how to clone or fork a repository:
@@ -132,7 +132,7 @@ To run the project, open with **index.html** with any web browser.
 For example, for Google Chrome with Ubuntu:
 
 ```sh
-  cd Leaderboard-project
+  cd COMMENTDISH-project
   google-chrome index.html
 ```
 
@@ -150,7 +150,10 @@ There are no test available for this project.
 
 ## 👥 Author <a name="authors"></a>
 
+👤 **Sumeya Ibrahim**
 
+
+- GitHub: [@isume295](https://github.com/isume295)
 
 👤 **Salim Bamahfoodh**
 
