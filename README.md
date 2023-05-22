@@ -23,7 +23,6 @@
 
 # 📗 Table of Contents
 
-- [� Table of Contents](#-table-of-contents)
 - [📖 \[LeaderBoard website\] ](#-leaderboard-website-)
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
