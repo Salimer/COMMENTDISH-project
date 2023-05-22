@@ -10,12 +10,12 @@ jobs:
     name: Lighthouse
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
         with:
           node-version: "12.x"
       - name: Setup Lighthouse
-        run: npm install -g @lhci/cli@0.11.x
+        run: npm install -g @lhci/cli@0.7.x
       - name: Lighthouse Report
         run: lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=.
   webhint:
