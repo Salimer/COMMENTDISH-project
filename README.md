@@ -4,7 +4,7 @@
   <img src="murple_logo.svg" alt="logo" width="140"  height="auto" />
   <br/>
 
-  <h1><b>Welcome to my project 😃</b></h1>
+  <h1><b>Welcome to our project 😃</b></h1>
 
 </div>
 
@@ -12,7 +12,7 @@
 <div align="center">
   
   <br/>
-<h1 align="center">LeaderBoard website</h1>
+<h1 align="center">COMMENTDISH website</h1>
 </div>
 
 
@@ -44,10 +44,10 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [LeaderBoard website] <a name="about-project"></a>
+# 📖 [COOMENTDISH website] <a name="about-project"></a>
 
 
-**LeaderBoard webiste** displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service.
+**COMMENTDISH webiste** is your ultimate platform for expressing your culinary opinions. Explore a wide variety of meals, from delectable classics to innovative creations, and share your thoughts with the world. Like, comment, and engage with fellow food enthusiasts as you uncover new flavors and embark on gastronomic adventures. Discover the joy of voicing your taste buds on Comment Dish, where every dish becomes a conversation.
 
 ## 🛠 Built With <a name="built-with"></a>
 
