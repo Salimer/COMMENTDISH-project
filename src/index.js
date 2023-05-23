@@ -7,7 +7,11 @@ const popupSection = document.querySelector('.popup-section');
 
 const container = document.querySelector('.item-container');
 const likeMe = async (i) => {
-  console.log(i);
+  const body = {
+    item: `${i}`,
+  };
+  const result = await api.createLikes('NofP2ryx69uYAWnWEVJ9', body);
+  console.log(result);
 };
 const test = async () => {
   const result = await api.getMeal();
@@ -20,7 +24,6 @@ const test = async () => {
     </div>
     <div class="detail-container">
         <span>${food.strMeal}</span>
-        
     </div>
     <div class="comment-btn">
     <div class="likes">
@@ -35,7 +38,7 @@ const test = async () => {
   const likes = document.querySelectorAll('.like-btn');
   likes.forEach((like, index) => {
     like.addEventListener('click', () => {
-      popupSection.classList.toggle('hide');
+      // popupSection.classList.toggle('hide');
       likeMe(index);
     });
   });
@@ -43,8 +46,8 @@ const test = async () => {
 
 const closeIcon = document.querySelector('#close-icon');
 closeIcon.addEventListener('click', () => {
-  popupSection.classList.toggle('hide');
-})
+
+});
 window.onload = () => {
   document.querySelector('.logo-img').setAttribute('src', img);
   test();
