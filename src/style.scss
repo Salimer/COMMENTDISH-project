@@ -8,7 +8,9 @@ $primary-color: #E7772D;
   box-sizing: border-box;
 }
 
-
+li {
+  list-style: none;
+}
 
 .nav-container {
    width: 100%;
@@ -57,11 +59,60 @@ $primary-color: #E7772D;
 }
 
 .popup-section {
+  background-color: gray;
+  padding: 1rem;
   
   .popup {
     display: flex;
     flex-direction: column;
-    margin: 1rem;
+    padding: 1rem;
+    background-color: #E7772D;
+    position: relative;
+    border-radius: 1rem;
+
+    .pp-header {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      #close-icon {
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 2rem;
+        height: 2rem;
+      }
+
+      .image {
+        width: 11rem;
+        height: 10rem;
+        background-color: red;
+      }
+
+      .pp-meal-name {
+        font-size: 2rem;
+        padding: 1rem;
+      }
+
+      .pp-meal-details {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .pp-meal-detail {
+          padding: 1rem 0;
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    .pp-body {
+      display: flex;
+      flex-direction: column;
+
+
+    }
 
     .pp-footer {
       .form {
