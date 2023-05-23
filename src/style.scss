@@ -1,5 +1,6 @@
 
 $primary-color: #E7772D;
+$border-radius: .6rem;
 
 
 * {
@@ -61,14 +62,26 @@ li {
 .popup-section {
   background-color: gray;
   padding: 1rem;
+  width: 100%;
+  height: 100%;
+	position: fixed;
+	top: 0;
+	z-index: 9999;
+	left: 0;
+	overflow-y: auto;
   
   .popup {
     display: flex;
-    flex-direction: column;
-    padding: 1rem;
-    background-color: #E7772D;
-    position: relative;
-    border-radius: 1rem;
+		flex-direction: column;
+		padding: 1.5rem;
+		width: 80%;
+		max-width: 37.5rem;
+		background-color: #E7772D;
+		position: relative;
+		border-radius: 0.6rem;
+		overflow-y: auto;
+		margin: 1rem auto;
+    border: 1px solid black;
 
     .pp-header {
       width: 100%;
@@ -131,6 +144,22 @@ li {
         .pp-form-title {
           font-size: 1.5rem;
           align-self: center;
+        }
+
+        .your-name {
+          padding: 1rem;
+          border-radius: $border-radius;
+        }
+
+        .msg {
+          height: 8rem;
+          border-radius: $border-radius;
+          padding: 1rem;
+        }
+
+        #pp-comment-btn {
+          padding: .4rem;
+          border-radius: $border-radius;
         }
       }
     }
