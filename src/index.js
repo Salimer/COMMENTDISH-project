@@ -3,6 +3,7 @@ import img from './assets/logo.png';
 import API from './modules/api.js';
 
 const api = new API();
+const popupSection = document.querySelector('.popup-section');
 
 const container = document.querySelector('.item-container');
 const likeMe = async (i) => {
@@ -34,10 +35,16 @@ const test = async () => {
   const likes = document.querySelectorAll('.like-btn');
   likes.forEach((like, index) => {
     like.addEventListener('click', () => {
+      popupSection.classList.toggle('hide');
       likeMe(index);
     });
   });
 };
+
+const closeIcon = document.querySelector('#close-icon');
+closeIcon.addEventListener('click', () => {
+  popupSection.classList.toggle('hide');
+})
 window.onload = () => {
   document.querySelector('.logo-img').setAttribute('src', img);
   test();
