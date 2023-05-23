@@ -1,6 +1,5 @@
 class API {
     baseURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
-
     involveURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
     constructor() {
