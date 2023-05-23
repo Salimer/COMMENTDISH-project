@@ -36,6 +36,13 @@ class API {
       const id = 'NofP2ryx69uYAWnWEVJ9';
       return id;
     };
+
+    createLikes = async (id, body) => {
+      const endPoint = `apps/${id}/likes/`;
+      const url = this.involveUrl + endPoint;
+      const responseJson = await this.fetchData(url, 'POST', body);
+      return responseJson;
+    }
 }
 
 export default API;
