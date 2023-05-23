@@ -1,11 +1,14 @@
-export default async () => {
-    const requestURL = 'https://www.themealdb.com/api/json/v1/1/random.php';
+export default async (index, api) => {
+    // Retrieve the mealID from our meals list
+    const mealID = api.retrieveMealID(index);
+    const requestURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
     const request = new Request(requestURL);
 
+    // Create the GET request for the specified meal
     const response = await fetch(request);
     const responseObj = await response.json();
-    console.log(responseObj.meals[0].strCategory);
 
+    // Initialise and setting the meal details
     const ppMealName = document.querySelector('.pp-meal-name');
     const ppMealArea = document.querySelector('#pp-meal-area');
     const ppMealCategory = document.querySelector('#pp-meal-category');
