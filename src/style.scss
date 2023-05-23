@@ -1,4 +1,9 @@
 
+  @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+  @import '~@fortawesome/fontawesome-free/css/all.css';
+
+
+ 
 $primary-color: #E7772D;
 
 
@@ -6,9 +11,15 @@ $primary-color: #E7772D;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
 }
 
-
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 .nav-container {
    width: 100%;
@@ -18,12 +29,13 @@ $primary-color: #E7772D;
    align-items: center;
    justify-content: space-between;
    background-color: antiquewhite;
-   position: sticky;
-   top: 0;
-   z-index: 1;
+  
   .logo{
-    // width: 10%;
-    // height: 90%;
+    width: 24%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img{
       width: 100%;
       height: auto;
@@ -33,10 +45,13 @@ $primary-color: #E7772D;
     display: flex;
     gap: 20px;
     list-style: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: #45062E;
   }
 }
 
-.main-container {
+.item-container {
   width: 100%;
   margin: 50px 0;
   height: auto;
@@ -47,11 +62,59 @@ $primary-color: #E7772D;
   align-items: center;
   .items{
     width: 300px;
-    height: 200px;
-    background-color: $primary-color;
+    height:  auto;
+    padding: 10px 10px;
+    border: 2px solid rgba(231, 119, 45, 0.9);
     display: flex;
     flex-direction: column;
-    gap: 10px
+    align-items: center;
+    gap: 10px;
+    .item-img-container{
+    background-color: rgba(231, 119, 45, 0.7);
+
+      width: 100%;
+      img{
+        width: 100%;
+        height: auto;
+      }
+    }
+    .detail-container{
+      display: flex;
+      align-items: center;
+      .likes{
+        display: flex; 
+        padding: 0 10px;
+        .like-btn {
+          border: none;
+          background-color: #ffffff;
+          font-size: 20px !important;
+        }
+      }
+    }
+    .comment-btn{
+      display: flex;
+      gap: 9rem;
+      .comment {
+        padding: 6px 12px;
+        margin: 0;
+        background-color: #E7772D;
+        border: none;
+        color: #ffffff;
+        font-weight: 400;
+      }
+    }
   }
-   
 }
+
+@media (max-width: 768px) {
+  .item-container {
+    grid-template-columns: auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .item-container {
+    grid-template-columns: auto auto ;
+  }
+}
+
