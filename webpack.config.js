@@ -42,4 +42,8 @@ module.exports = {
       },
     ],
   },
+  watch: true,
+  watchOptions: {
+    ignored: /node_modules/, // Specify any directories or files to be ignored during watch
+  },
 };
