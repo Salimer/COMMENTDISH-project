@@ -55,3 +55,19 @@ $primary-color: #E7772D;
   }
    
 }
+
+.popup-section {
+  
+  .popup {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+
+    .pp-footer {
+      .form {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
