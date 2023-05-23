@@ -11,14 +11,12 @@ const likeMe = async (i) => {
   const body = {
     item: `${i}`,
   };
-  const result = await api.createLikes('NofP2ryx69uYAWnWEVJ9', body);
-  console.log(result);
 };
 const test = async () => {
   const result = await api.getMeal();
+  api.mealsList = result.meals;
   container.innerHTML = result.meals.reduce((output, food) => (
-    `${output
-    }
+    `${output}
     <div class="items">
     <div class="item-img-container">
         <img class='item-img' src="${food.strMealThumb}" alt="item-img">
@@ -39,8 +37,8 @@ const test = async () => {
   const likes = document.querySelectorAll('.like-btn');
   likes.forEach((like, index) => {
     like.addEventListener('click', () => {
-      popup();
-      likeMe(index);
+      popup(index, api);
+      // likeMe(index);
     });
   });
 };
