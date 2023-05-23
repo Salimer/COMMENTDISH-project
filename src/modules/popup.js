@@ -13,7 +13,10 @@ export default async (index, api) => {
     const ppMealArea = document.querySelector('#pp-meal-area');
     const ppMealCategory = document.querySelector('#pp-meal-category');
     const popupSection = document.querySelector('.popup-section');
+    const ppMealImg = document.querySelector('#pp-image');
 
+    console.log(responseObj.meals[0].strMealThumb);
+    ppMealImg.src = responseObj.meals[0].strMealThumb;
     ppMealName.textContent = responseObj.meals[0].strMeal;
     ppMealArea.textContent = responseObj.meals[0].strArea;
     ppMealCategory.textContent = responseObj.meals[0].strCategory;
