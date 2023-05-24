@@ -1,5 +1,6 @@
 import displayComments from "./displayComments.js";
 import postComment from "./postComment.js";
+import commentsCounter from "./commentsCounter.js";
 
 export default async (index, api) => {
   // Retrieve the mealID from our meals list
@@ -22,17 +23,24 @@ export default async (index, api) => {
 
   // Initialise the comments details
   const commentsCount = document.querySelector('#comments-number');
-  commentsCount.textContent = `${commentsObj.length}`;
+  commentsCount.textContent = `${commentsCounter()}`;
   
   displayComments(commentsObj);
 
   // posting new comment
+  const newCommentUsername = document.querySelector('.your-name');
+  const newCommentMsg = document.querySelector('.msg');
   const newCommentBtn = document.querySelector('#pp-comment-btn');
 
   newCommentBtn.addEventListener('click', async () => {
+    if((newCommentUsername.value === '' || newCommentMsg.value === '')) {
+      alert('empty username')
+    } else {
+      console.log(newCommentMsg.value);
       await postComment(api, index);
       commentsObj = await api.fetchData(commentsURL, 'GET');
       displayComments(commentsObj);
+    }
   });
 
   ppMealImg.src = responseObj.meals[0].strMealThumb;
