@@ -13,7 +13,6 @@ export default async (index, api) => {
     const commentsGET = new Request(commentsURL);
     const commentsRes = await fetch(commentsGET);
     const commentsObj = await commentsRes.json();
-    console.log(commentsObj[0]);
 
 
     // Initialise and setting the meal details
@@ -25,15 +24,40 @@ export default async (index, api) => {
 
     //Initialise the comments details
     const commentsContainer = document.querySelector('.pp-comments-container');
-    const comment = document.createElement('li');
-    comment.innerHTML = `
-    ${commentsObj[0].creation_date}<br>
-    ${commentsObj[0].username}: ${commentsObj[0].comment}
+    commentsObj.forEach((commentObj) => {
+        const comment = document.createElement('li');
+        comment.className = 'pp-comment';
+        comment.innerHTML = `
+    ${commentObj.creation_date}
+    ${commentObj.username} : ${commentObj.comment}
     `;
     commentsContainer.appendChild(comment);
+    });
 
+    // posting new comment
+    const newCommentUsername = document.querySelector('.your-name');
+    const newCommentMsg = document.querySelector('.msg');
+    const newCommentBtn = document.querySelector('#pp-comment-btn');
 
-    console.log(responseObj.meals[0].strMealThumb);
+    newCommentBtn.addEventListener('click', async () => {
+        if(newCommentUsername !== '' && newCommentMsg !== '') {
+            const body = {
+                "item_id": "item1",
+                "username": newCommentUsername.value,
+                "comment": newCommentMsg.value
+            }
+            
+            const request = new Request('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments', {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(body),
+              });
+              await fetch(request);
+        }
+    })
+    
     ppMealImg.src = responseObj.meals[0].strMealThumb;
     ppMealName.textContent = responseObj.meals[0].strMeal;
     ppMealArea.textContent = responseObj.meals[0].strArea;
