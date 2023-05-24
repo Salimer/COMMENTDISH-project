@@ -42,7 +42,7 @@ const likeMe = async (i) => {
 };
 
 // display list of items on the home page
-const test = async () => {
+const displayItems = async () => {
   const result = await api.getMeal();
   mealsArray = result.meals;
   api.mealsList = result.meals;
@@ -97,7 +97,7 @@ const itemsCounter = async () => {
 // display display items with number of likes
 window.onload = async () => {
   document.querySelector('.logo-img').setAttribute('src', img);
-  await test();
+  await displayItems();
   await itemsCounter();
   await displayLikes();
 };
