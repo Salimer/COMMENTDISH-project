@@ -12,5 +12,10 @@ class Meal {
     const addLike = api.createLikes(await this.idApp, body);
     return addLike;
   }
+
+  async getLikes() {
+    const likes = api.getLikes(await this.idApp);
+    return likes;
+  }
 }
 export default Meal;
