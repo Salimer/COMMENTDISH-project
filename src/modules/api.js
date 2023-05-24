@@ -55,7 +55,12 @@ class API {
       return responseJson;
     }
 
-    getLikes = a
+    getLikes = async (id) => {
+      const endPoint = `apps/${id}/likes/`;
+      const url = this.involveURL + endPoint;
+      const responseJson = await this.fetchData(url, 'GET');
+      return responseJson;
+    };
 }
 
 export default API;
