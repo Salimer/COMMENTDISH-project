@@ -2,17 +2,13 @@ export default async (index, api) => {
   // Retrieve the mealID from our meals list
   const mealID = api.retrieveMealID(index);
   const requestURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
-  const request = new Request(requestURL);
 
   // Create the GET request for the specified meal
   const responseObj = await api.fetchData(requestURL, 'GET');
-//   const responseObj = await response.json();
 
-  // Comments game ID: XwWY2NVPZAn0YyuYeG9s
+  // Comments GET request
   const commentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments?item_id=${index}`;
-  const commentsGET = new Request(commentsURL);
-  const commentsRes = await fetch(commentsGET);
-  const commentsObj = await commentsRes.json();
+  const commentsObj = await api.fetchData(commentsURL, 'GET');
 
   // Initialise and setting the meal details
   const ppMealName = document.querySelector('.pp-meal-name');
@@ -48,15 +44,11 @@ export default async (index, api) => {
         username: newCommentUsername.value,
         comment: newCommentMsg.value,
       };
-
-      const request = new Request('https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(body),
-      });
-      await fetch(request);
+      const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments';
+      const headers = {
+            'Content-Type': 'application/json'
+        }
+      await api.fetchData(URL, 'POST', body, headers, )
       newCommentUsername.value = '';
       newCommentMsg.value = '';
     }
