@@ -1,17 +1,12 @@
 import './style.scss';
 import img from './assets/logo.png';
 import API from './modules/api.js';
-import popup from './modules/popup';
+import popup from './modules/popup.js';
 
 const api = new API();
 const popupSection = document.querySelector('.popup-section');
 
 const container = document.querySelector('.item-container');
-const likeMe = async (i) => {
-  const body = {
-    item: `${i}`,
-  };
-};
 const test = async () => {
   const result = await api.getMeal();
   api.mealsList = result.meals;
