@@ -17,10 +17,10 @@ const displayLikes = async () => {
     mealsArray.forEach((meal, index) => {
       const match = result.find((obj2) => obj2.item_id === `${index}`);
       if (match) {
-        // console.log(match);
+        console.log(match);
         likes[index].innerHTML = match.likes;
       } else {
-        // console.log('no-match');
+        console.log('no-match');
       }
     });
   } else {
@@ -37,6 +37,7 @@ const likeMe = async (i) => {
   };
   const result = await meals.addLikes(data);
   await displayLikes();
+  console.log(result);
   return result;
 };
 
