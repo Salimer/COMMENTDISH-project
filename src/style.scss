@@ -96,11 +96,12 @@ li {
       .likes {
         display: flex;
         padding: 0 10px;
+        background-color: red;
 
         .like-btn {
           border: none;
           background-color: #fff;
-          font-size: 20px !important;
+          // font-size: 20px !important;
         }
       }
     }
@@ -117,6 +118,27 @@ li {
         color: #fff;
         font-weight: 400;
       }
+
+       
+      .likes {
+        display: flex;
+        padding: 0 10px;
+        // background-color: red;
+        align-items: center;
+        gap: 5px;
+
+        .like-btn {
+          border: none;
+          background-color: #fff;
+          font-size: 20px !important;
+          font-weight: 700 !important;
+          i {
+            color: #e7772d;
+          }
+        }
+      }
+
+      
     }
   }
 }

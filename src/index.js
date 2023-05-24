@@ -1,18 +1,25 @@
 import './style.scss';
 import img from './assets/logo.png';
 import API from './modules/api.js';
+import Meal from './modules/meals.js';
 
 const api = new API();
+const meals = new Meal();
 const popupSection = document.querySelector('.popup-section');
 
 const container = document.querySelector('.item-container');
+
 const likeMe = async (i) => {
-  const body = {
-    item: `${i}`,
+  const item_id = `${i}`;
+
+  const data = {
+    item_id,
   };
-  const result = await api.createLikes('NofP2ryx69uYAWnWEVJ9', body);
+  // const body = await JSON.stringify(data);
+  const result = await api.createLikes('UMdpWRttDSeg7MNCoHn4', data);
   console.log(result);
 };
+
 const test = async () => {
   const result = await api.getMeal();
   container.innerHTML = result.meals.reduce((output, food) => (
@@ -44,9 +51,9 @@ const test = async () => {
   });
 };
 
-const closeIcon = document.querySelector('#close-icon');
+const closeIcon = document.querySelector('.test');
 closeIcon.addEventListener('click', () => {
-
+  likeMe(6);
 });
 window.onload = () => {
   document.querySelector('.logo-img').setAttribute('src', img);
