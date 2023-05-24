@@ -5,8 +5,8 @@ export default async (index, api) => {
   const request = new Request(requestURL);
 
   // Create the GET request for the specified meal
-  const response = await fetch(request);
-  const responseObj = await response.json();
+  const responseObj = await api.fetchData(requestURL, 'GET');
+//   const responseObj = await response.json();
 
   // Comments game ID: XwWY2NVPZAn0YyuYeG9s
   const commentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments?item_id=${index}`;

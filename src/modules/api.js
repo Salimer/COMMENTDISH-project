@@ -16,7 +16,7 @@ class API {
       };
       let request;
       if (method === 'GET') {
-        request = new Request(url, settingRequest);
+        request = new Request(url);
       } else if (method === 'POST') {
         settingRequest.body = JSON.stringify(body);
         request = new Request(url, settingRequest);
