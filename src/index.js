@@ -76,6 +76,7 @@ const test = async () => {
   });
 };
 
+const popupSection = document.querySelector('.popup-section');
 const closeIcon = document.querySelector('#close-icon');
 closeIcon.addEventListener('click', () => {
   popupSection.classList.toggle('hide');
@@ -88,7 +89,7 @@ const itemsCounter = async () => {
 };
 
 // display display items with number of likes
-  window.onload = async () => {
+window.onload = async () => {
   document.querySelector('.logo-img').setAttribute('src', img);
   await test();
   await itemsCounter();
