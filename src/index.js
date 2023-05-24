@@ -76,9 +76,16 @@ const test = async () => {
   });
 };
 
+const itemsCounter = async () => {
+  const h3 = document.querySelector('h3');
+  const totalIitems = mealsArray.length;
+  h3.innerHTML = `We have ${totalIitems} number of Dishes`;
+};
+
 // display display items with number of likes
 window.onload = async () => {
   document.querySelector('.logo-img').setAttribute('src', img);
   await test();
+  await itemsCounter();
   await displayLikes();
 };

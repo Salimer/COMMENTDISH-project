@@ -262,3 +262,11 @@ li {
     grid-template-columns: auto auto;
   }
 }
+
+.item-number {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
