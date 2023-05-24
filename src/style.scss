@@ -92,23 +92,12 @@ li {
     .detail-container {
       display: flex;
       align-items: center;
-
-      .likes {
-        display: flex;
-        padding: 0 10px;
-        background-color: red;
-
-        .like-btn {
-          border: none;
-          background-color: #fff;
-          // font-size: 20px !important;
-        }
-      }
     }
 
     .comment-btn {
+      width: 100%;
       display: flex;
-      gap: 9rem;
+      justify-content: space-between;
 
       .comment {
         padding: 6px 12px;
@@ -122,7 +111,6 @@ li {
       .likes {
         display: flex;
         padding: 0 10px;
-        // background-color: red;
         align-items: center;
         gap: 5px;
 
