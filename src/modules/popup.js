@@ -46,9 +46,9 @@ export default async (index, api) => {
       };
       const URL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments';
       const headers = {
-            'Content-Type': 'application/json'
-        }
-      await api.fetchData(URL, 'POST', body, headers, )
+        'Content-Type': 'application/json',
+      };
+      await api.fetchData(URL, 'POST', body, headers);
       newCommentUsername.value = '';
       newCommentMsg.value = '';
     }
