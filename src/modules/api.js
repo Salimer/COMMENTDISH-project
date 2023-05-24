@@ -1,5 +1,6 @@
 class API {
     baseURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
+
     involveURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
     constructor() {
@@ -44,11 +45,7 @@ class API {
       return responseJson;
     }
 
-    retrieveMealID = (index) => {
-      return this.mealsList[index].idMeal
-    }
+    retrieveMealID = (index) => this.mealsList[index].idMeal
 }
-
-
 
 export default API;
