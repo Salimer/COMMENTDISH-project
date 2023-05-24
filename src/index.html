@@ -33,34 +33,26 @@
         <article class="popup">
             <div class="pp-header">
                 <button id="close-icon">X</button>
-                <div class="image"></div>
-                <p class="pp-meal-name">Meal name</p>
+                <img id="pp-image" class="image" src="">
+                <p class="pp-meal-name"></p>
                 <div class="pp-meal-details">
-                    <p id="pp-meal-area" class="pp-meal-detail">Area:</p>
-                    <p id="pp-meal-category" class="pp-meal-detail">Category:</p>
+                    <p class="pp-meal-detail">Area: <span id="pp-meal-area"></span></p>
+                    <p class="pp-meal-detail">Category: <span id="pp-meal-category"></span></p>
                 </div>
             </div>
             <div class="pp-body">
-                <p class="pp-comments-title">Comments (<span id="comments-number">23</span>)</p>
+                <p class="pp-comments-title">Comments (<span id="comments-number"></span>)</p>
                 <ul class="pp-comments-container">
-                    <li class="pp-comment">
-                        03/11/2021 Alex: I'd love to buy it!
-                    </li>
-                    <li class="pp-comment">
-                        03/11/2021 Alex: I'd love to buy it! but where is the place to be able to bring my family and we all enjoy the nice weather?
-                    </li>
-                    <li class="pp-comment">
-                        03/11/2021 Alex: I'd love to buy it!
-                    </li>
+
                 </ul>
             </div>
             <div class="pp-footer">
-                <form class="form">
+                <div class="form">
                     <p class="pp-form-title">Add a comment</p>
                     <input class="your-name" type="text" placeholder="Your name">
                     <textarea class="msg" placeholder="Your insights"></textarea>
                     <button id="pp-comment-btn">Comment</button>
-                </form>
+                </div>
             </div>
         </article>
     </section>

@@ -164,7 +164,7 @@ li {
     max-width: 37.5rem;
     position: relative;
     border-radius: 0.6rem;
-    overflow-y: auto;
+    overflow-y: hidden;
     margin: 1rem auto;
     border: 1px solid black;
 
@@ -183,9 +183,9 @@ li {
       }
 
       .image {
-        width: 11rem;
-        height: 10rem;
+        width: 80%;
         background-color: red;
+        border-radius: $border-radius;
       }
 
       .pp-meal-name {

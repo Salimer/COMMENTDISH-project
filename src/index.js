@@ -1,6 +1,7 @@
 import './style.scss';
 import img from './assets/logo.png';
 import API from './modules/api.js';
+import popup from './modules/popup.js';
 import Meal from './modules/meals.js';
 
 const api = new API();
@@ -8,7 +9,6 @@ const meals = new Meal();
 let mealsArray = [];
 
 const container = document.querySelector('.item-container');
-
 // display likes
 const displayLikes = async () => {
   const result = await meals.getLikes();
@@ -45,10 +45,9 @@ const likeMe = async (i) => {
 const test = async () => {
   const result = await api.getMeal();
   mealsArray = result.meals;
-
+  api.mealsList = result.meals;
   container.innerHTML = result.meals.reduce((output, food) => (
-    `${output
-    }
+    `${output}
     <div class="items">
     <div class="item-img-container">
         <img class='item-img' src="${food.strMealThumb}" alt="item-img">
@@ -71,10 +70,17 @@ const test = async () => {
   const likes = document.querySelectorAll('.like-btn');
   likes.forEach((like, index) => {
     like.addEventListener('click', () => {
+      popup(index, api);
       likeMe(index);
     });
   });
 };
+
+const popupSection = document.querySelector('.popup-section');
+const closeIcon = document.querySelector('#close-icon');
+closeIcon.addEventListener('click', () => {
+  popupSection.classList.toggle('hide');
+});
 
 const itemsCounter = async () => {
   const h3 = document.querySelector('h3');

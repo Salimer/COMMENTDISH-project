@@ -6,6 +6,7 @@ class API {
     constructor() {
       this.url = this.baseURL;
       this.involveUrl = this.involveURL;
+      this.mealsList = [];
     }
 
     fetchData = async (url, method, body, headers = {}) => {
@@ -61,6 +62,8 @@ class API {
       const responseJson = await this.fetchData(url, 'GET');
       return responseJson;
     };
+
+    retrieveMealID = (index) => this.mealsList[index].idMeal
 }
 
 export default API;
