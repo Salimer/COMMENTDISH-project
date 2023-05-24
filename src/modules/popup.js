@@ -23,6 +23,8 @@ export default async (index, api) => {
     const ppMealImg = document.querySelector('#pp-image');
 
     //Initialise the comments details
+    const commentsCount = document.querySelector('#comments-number');
+    commentsCount.textContent = `${commentsObj.length}`
     const commentsContainer = document.querySelector('.pp-comments-container');
     commentsObj.forEach((commentObj) => {
         const comment = document.createElement('li');
@@ -55,6 +57,8 @@ export default async (index, api) => {
                 body: JSON.stringify(body),
               });
               await fetch(request);
+              newCommentUsername.value = '';
+              newCommentMsg.value = '';
         }
     })
     
