@@ -25,10 +25,4 @@ export default async (api) => {
       </div>
       `
   ), '');
-  const comments = document.querySelectorAll('.comment');
-  comments.forEach((comment, index) => {
-    comment.addEventListener('click', () => {
-    //   popup(index, api);
-    });
-  });
 };
