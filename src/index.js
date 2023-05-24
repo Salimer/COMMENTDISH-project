@@ -70,10 +70,16 @@ const test = async () => {
   const likes = document.querySelectorAll('.like-btn');
   likes.forEach((like, index) => {
     like.addEventListener('click', () => {
-      popup(index, api);
       likeMe(index);
     });
   });
+
+  const comments = document.querySelectorAll('.comment');
+  comments.forEach((comment, index) => {
+    comment.addEventListener('click', () => {
+      popup(index, api);
+    })
+  })
 };
 
 const popupSection = document.querySelector('.popup-section');
@@ -85,7 +91,7 @@ closeIcon.addEventListener('click', () => {
 const itemsCounter = async () => {
   const h3 = document.querySelector('h3');
   const totalIitems = mealsArray.length;
-  h3.innerHTML = `We have ${totalIitems} number of Dishes`;
+  h3.innerHTML = `We have ${totalIitems} Dishes`;
 };
 
 // display display items with number of likes
