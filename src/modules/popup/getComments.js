@@ -1,8 +1,7 @@
-export default async (api, commentsURL, commentsObj) => new Promise(async (resolve, reject) => {
+export default (api, commentsURL, commentsObj) => new Promise((resolve, reject) => {
   try {
-    commentsObj = await api.fetchData(commentsURL, 'GET');
+    commentsObj = api.fetchData(commentsURL, 'GET');
     resolve(commentsObj);
-    return commentsObj;
   } catch (error) {
     reject();
   }

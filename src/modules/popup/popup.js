@@ -9,6 +9,9 @@ export default async (index, api) => {
   const mealID = api.retrieveMealID(index);
   const requestURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealID}`;
 
+  // Initialise the comments details
+  const commentsCount = document.querySelector('#comments-number');
+
   // Create the GET request for the specified meal
   const responseObj = await api.fetchData(requestURL, 'GET');
   setMealDetails(responseObj);
@@ -27,11 +30,7 @@ export default async (index, api) => {
     comments = document.querySelectorAll('.pp-comment');
     commentsCount.textContent = `${commentsCounter(comments)}`;
     popupSection.classList.toggle('hide');
-    console.error('No comments are initiated for this product');
   });
-
-  // Initialise the comments details
-  const commentsCount = document.querySelector('#comments-number');
 
   // posting new comment
   const newCommentUsername = document.querySelector('.your-name');
