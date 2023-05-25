@@ -1,10 +1,7 @@
 class API {
-    baseURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
-
     involveURL = 'https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/';
 
     constructor() {
-      this.url = this.baseURL;
       this.involveUrl = this.involveURL;
       this.mealsList = [];
     }
@@ -34,34 +31,12 @@ class API {
       return jsonResponse;
     };
 
-    getMeal = async () => {
-      const response = await this.fetchData(this.url, 'GET');
-      return response;
-    };
-
-    createApp = async () => {
-      const endPoint = 'apps/';
-      const url = this.involveUrl + endPoint;
-      const responseJson = await this.fetchData(url, 'POST');
-      return responseJson;
-    };
-
-    createLikes = async (id, body) => {
-      const endPoint = `apps/${id}/likes/`;
-      const url = this.involveUrl + endPoint;
-      const headers = {
-        'Content-Type': 'application/json',
-      };
-      const responseJson = await this.fetchData(url, 'POST', body, headers);
-      return responseJson;
-    }
-
-    getLikes = async (id) => {
-      const endPoint = `apps/${id}/likes/`;
-      const url = this.involveURL + endPoint;
-      const responseJson = await this.fetchData(url, 'GET');
-      return responseJson;
-    };
+     createApp = async () => {
+       const endPoint = 'apps/';
+       const url = this.involveUrl + endPoint;
+       const responseJson = await this.fetchData(url, 'POST');
+       return responseJson;
+     };
 
     retrieveMealID = (index) => this.mealsList[index].idMeal
 }
