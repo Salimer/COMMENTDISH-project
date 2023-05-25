@@ -1,4 +1,3 @@
-export default () => {
-    const comments = document.querySelectorAll('.pp-comment');
+export default (comments) => {
     return comments.length;
 }

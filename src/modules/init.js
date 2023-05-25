@@ -11,7 +11,11 @@ const api = new API();
 export default async () => {
   document.querySelector('.logo-img').setAttribute('src', img);
   await displayItems(api);
-  await itemsCounter();
+
+  // Items counting process
+  const items = document.querySelectorAll('.items');
+    const h3 = document.querySelector('h3');
+    h3.innerHTML = `We have ${itemsCounter(items)} Dishes`;
   await displayLikes(api);
 
   // Like button event listener
