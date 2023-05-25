@@ -6,10 +6,7 @@ export default async (api) => {
     api.mealsList.forEach((meal, index) => {
       const match = result.find((obj2) => obj2.item_id === `${index}`);
       if (match) {
-        console.log(match);
         likes[index].innerHTML = match.likes;
-      } else {
-        console.log('no-match');
       }
     });
   } else {
