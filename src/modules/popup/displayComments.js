@@ -1,12 +1,11 @@
 export default (commentsObj) => {
-    const commentsContainer = document.querySelector('.pp-comments-container');
+  const commentsContainer = document.querySelector('.pp-comments-container');
 
-    while (commentsContainer.firstChild) {
-        commentsContainer.removeChild(commentsContainer.firstChild);
-      }
-      
+  while (commentsContainer.firstChild) {
+    commentsContainer.removeChild(commentsContainer.firstChild);
+  }
+
   commentsObj.forEach((commentObj) => {
-
     const comment = document.createElement('li');
     comment.className = 'pp-comment';
     comment.innerHTML = `
@@ -15,4 +14,4 @@ export default (commentsObj) => {
     `;
     commentsContainer.appendChild(comment);
   });
-}
+};

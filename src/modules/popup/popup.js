@@ -1,8 +1,8 @@
-import displayComments from "./displayComments.js";
-import postComment from "./postComment.js";
-import commentsCounter from "./commentsCounter.js";
-import setMealDetails from "./setMealDetails.js";
-import getComments from "./getComments.js";
+import displayComments from './displayComments.js';
+import postComment from './postComment.js';
+import commentsCounter from './commentsCounter.js';
+import setMealDetails from './setMealDetails.js';
+import getComments from './getComments.js';
 
 export default async (index, api) => {
   // Retrieve the mealID from our meals list
@@ -14,7 +14,7 @@ export default async (index, api) => {
   setMealDetails(responseObj);
 
   // Comments GET request
-  const commentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments?item_id=${index}`
+  const commentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments?item_id=${index}`;
   let commentsObj = [];
   const popupSection = document.querySelector('.popup-section');
   let comments = document.querySelectorAll('.pp-comment');
@@ -28,7 +28,7 @@ export default async (index, api) => {
     commentsCount.textContent = `${commentsCounter(comments)}`;
     popupSection.classList.toggle('hide');
     console.error('No comments are initiated for this product');
-  })
+  });
 
   // Initialise the comments details
   const commentsCount = document.querySelector('#comments-number');
@@ -39,8 +39,8 @@ export default async (index, api) => {
   const newCommentBtn = document.querySelector('#pp-comment-btn');
 
   newCommentBtn.addEventListener('click', async () => {
-    if((newCommentUsername.value === '' || newCommentMsg.value === '')) {
-      alert('empty username')
+    if ((newCommentUsername.value === '' || newCommentMsg.value === '')) {
+      alert('empty username');
     } else {
       await postComment(api, index);
       commentsObj = await api.fetchData(commentsURL, 'GET');

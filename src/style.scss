@@ -10,6 +10,7 @@ $border-radius: 0.6rem;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
+  color: #45062e;
 }
 
 header {
@@ -257,4 +258,24 @@ li {
   align-items: center;
   justify-content: center;
   margin: 20px 0;
+}
+
+.footer {
+  width: 100%;
+  background-color: antiquewhite;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 0 1rem;
+  .img-container{
+    width: 100px;
+    img{
+      width: 100%;
+      height: auto;
+    }
+  }
 }

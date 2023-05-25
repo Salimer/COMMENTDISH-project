@@ -1,3 +1,1 @@
-export default (comments) => {
-    return comments.length;
-}
+export default (comments) => comments.length;

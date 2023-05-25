@@ -1,3 +1,1 @@
- export default (items) => {
-    return items.length;
-  };
+export default (items) => items.length;
