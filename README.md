@@ -78,7 +78,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](https://salimer.github.io/COMMENTDISH-project/dist)
+- [Live Demo Link](https://salimer.github.io/COMMENTDISH-project/dist/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
