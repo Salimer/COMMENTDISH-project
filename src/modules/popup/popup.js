@@ -16,16 +16,19 @@ export default async (index, api) => {
   // Comments GET request
   const commentsURL = `https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/XwWY2NVPZAn0YyuYeG9s/comments?item_id=${index}`
   let commentsObj = [];
+  const popupSection = document.querySelector('.popup-section');
   getComments(api, commentsURL, commentsObj).then((commentsObj) => {
     displayComments(commentsObj);
-    console.log(commentsObj);
+    commentsCount.textContent = `${commentsCounter()}`;
+    popupSection.classList.toggle('hide');
   }).catch(() => {
+    commentsCount.textContent = `${commentsCounter()}`;
+    popupSection.classList.toggle('hide');
     console.error('No comments are initiated for this product');
   })
 
   // Initialise the comments details
   const commentsCount = document.querySelector('#comments-number');
-  commentsCount.textContent = `${commentsCounter()}`;
 
   // posting new comment
   const newCommentUsername = document.querySelector('.your-name');
@@ -39,9 +42,8 @@ export default async (index, api) => {
       await postComment(api, index);
       commentsObj = await api.fetchData(commentsURL, 'GET');
       displayComments(commentsObj);
+      commentsCount.textContent = `${commentsCounter()}`;
     }
   });
- 
-  const popupSection = document.querySelector('.popup-section');
-  popupSection.classList.toggle('hide');
+  
 };
