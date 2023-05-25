@@ -7,8 +7,5 @@ export default async (i, api) => {
     'Content-Type': 'application/json',
   };
   const result = await api.fetchData(url, 'POST', body, headers);
-  // await displayLikes();
-  console.log(result);
-  // console.log(i);
   return result;
 };
