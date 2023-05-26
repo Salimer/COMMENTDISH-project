@@ -107,6 +107,7 @@ li {
         border: none;
         color: #fff;
         font-weight: 400;
+        cursor: pointer;
       }
 
       .likes {
@@ -118,6 +119,7 @@ li {
         .like-btn {
           border: none;
           background-color: #fff;
+          cursor: pointer;
 
           .like-icon {
             width: 25px;
@@ -167,6 +169,7 @@ li {
         top: 1rem;
         width: 2rem;
         height: 2rem;
+        cursor: pointer;
       }
 
       .image {
@@ -232,6 +235,7 @@ li {
         #pp-comment-btn {
           padding: 0.4rem;
           border-radius: $border-radius;
+          cursor: pointer;
         }
       }
     }
