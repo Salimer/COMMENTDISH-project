@@ -133,26 +133,25 @@ For more information on how to clone or fork a repository:
 
 ### Install
 
-- Run ` npm i `
+- Run ` npm install `
 
 ### Usage
 
-To run the project, open with **index.html** with any web browser.
+To run the project, execute the following command:
 
-For example, for Google Chrome with Ubuntu:
-
-```sh
-  cd COMMENTDISH-project
-  google-chrome index.html
-```
+Run `npm start`
 
 ### Run tests
 
-There are no test available for this project.
+To run tests, run the following command:
 
+to test validation errors npx hint .
 
+to test CSS linter errors `npx stylelint "**/*.{css,scss}"`
 
+to test JavaScript linter errors  `npx eslint .`
 
+to run the jest tests `npx test`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
