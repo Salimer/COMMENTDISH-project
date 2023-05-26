@@ -3,7 +3,6 @@ export default async (api) => {
   const container = document.querySelector('.item-container');
   const url = 'https://www.themealdb.com/api/json/v1/1/filter.php?c=Seafood';
   const result = await api.fetchData(url, 'GET');
-  //   const result = await api.getMeal();
   api.mealsList = result.meals;
   container.innerHTML = result.meals.reduce((output, food) => (
     `${output}
