@@ -1,6 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
-@import '@fortawesome/fontawesome-free/css/all.css';
+// @import '@fortawesome/fontawesome-free/css/all.css';
 
 $primary-color: #e7772d;
 $border-radius: 0.6rem;
@@ -118,11 +118,9 @@ li {
         .like-btn {
           border: none;
           background-color: #fff;
-          font-size: 20px !important;
-          font-weight: 700 !important;
 
-          i {
-            color: #e7772d;
+          .like-icon {
+            width: 25px;
           }
         }
       }

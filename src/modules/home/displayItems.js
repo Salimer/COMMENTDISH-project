@@ -1,3 +1,5 @@
+import like from './../../assets/like.svg';
+
 // display list of items on the home page
 export default async (api) => {
   const container = document.querySelector('.item-container');
@@ -16,7 +18,7 @@ export default async (api) => {
       <div class="comment-btn">
       <div class="likes">
               
-          <button class="like-btn"><i class="fa-regular fa-heart"></i></button>
+          <button class="like-btn"><img class="like-icon" src="${like}" class="" alt="like-icon"></button>
           <span class="nos-of-like">0</span>
           </div>
           <button class="comment">comments</button>
