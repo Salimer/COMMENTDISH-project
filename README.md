@@ -139,19 +139,19 @@ For more information on how to clone or fork a repository:
 
 To run the project, execute the following command:
 
-Run `npm start`
+- Run `npm start`
 
 ### Run tests
 
 To run tests, run the following command:
 
-to test validation errors npx hint .
+- to test validation errors `npx hint .`
 
-to test CSS linter errors `npx stylelint "**/*.{css,scss}"`
+- to test CSS linter errors `npx stylelint "**/*.{css,scss}"`
 
-to test JavaScript linter errors  `npx eslint .`
+- to test JavaScript linter errors  `npx eslint .`
 
-to run the jest tests `npx test`
+- to run the jest tests `npx test`
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
