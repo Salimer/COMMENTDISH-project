@@ -45,5 +45,3 @@ const closeIcon = document.querySelector('#close-icon');
 closeIcon.addEventListener('click', () => {
   popupSection.classList.toggle('hide');
 });
-
-// Setting footer element
