@@ -27,6 +27,7 @@
   - [🛠 Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
+  - [🤯 Walk through video ](#walk-through)
   - [🚀 Live Demo ](#-live-demo-)
   - [💻 Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
@@ -72,6 +73,16 @@
 - **Dynamic creation of content** 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- WALKTHROUGH -->
+
+## 🤯 Walk through video <a name="walk-through"></a>
+
+
+- [here](https://youtu.be/dYmqQRuvd4c)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 <!-- LIVE DEMO -->
 
