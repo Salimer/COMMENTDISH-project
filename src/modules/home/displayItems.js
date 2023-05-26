@@ -1,4 +1,4 @@
-import like from './../../assets/like.svg';
+import like from '../../assets/like.svg';
 
 // display list of items on the home page
 export default async (api) => {
