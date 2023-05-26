@@ -180,7 +180,7 @@ To run tests, run the following command:
 
 
 Future changes:
-- improve score box responsiveness
+- Add animations and transitions
 - Add more styles and colors
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
